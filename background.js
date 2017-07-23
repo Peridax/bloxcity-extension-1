@@ -10,7 +10,7 @@ function Core() {
     };
 
     this.crawl = (obj) => {
-        $.get('https://www.bloxcity.com/store/fetch/recent/1/').then((data) => {
+        $.get('https://www.bloxcity.com/store/fetch/shirts/1/').then((data) => {
             let $first = $('.store-item-card', data).eq(0);
 
             if (!obj.init.id) {
@@ -22,6 +22,7 @@ function Core() {
                 obj.curr.img = $first.find('img').eq(0).attr('src');
 
                 if (obj.curr.id !== obj.init.id) {
+                    obj.init.id = obj.curr.id;
                     obj.curr.id > obj.init.id ? obj.curr.state = 1 : obj.curr.state = 2;
                     obj.notify(obj.curr);
                 };
