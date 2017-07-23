@@ -1,0 +1,13 @@
+{
+
+  "name": "BLOX City Notifier",
+  "description": "My own bloxcity notifier",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "permissions": ["notifications", "unlimitedStorage", "https://*.bloxcity.com/*"],
+
+  "background": {
+    "scripts": ["assets/js/jquery.js", "background.js"]
+  }
+
+}
